@@ -1,0 +1,28 @@
+.reactive-form-content{
+  margin: 2px 7px;
+}
+h2{
+  font-weight: 700;
+  color:midnightblue;
+}
+.update,.submit{
+  color:#fff;
+  border: 0;
+  padding: 7px;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  border-radius: 2px;
+  margin: 9px 0;
+}
+label{
+  color: midnightblue;
+}
+button:hover{
+
+  background-color: lightskyblue;
+
+}
+
+button[disabled]{
+  background-color: #ececec;
+}

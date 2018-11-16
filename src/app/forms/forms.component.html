@@ -1,0 +1,44 @@
+<form [formGroup]="myForm" >
+  <div class="reactive-form-content">
+    <h2>Reactive forms</h2>
+    <label for="">
+      Name : <input type="text" [formControl]="firstName">
+
+    </label>
+    <p> {{firstName.value}}</p>
+    <button (click)="updateName()" class="update">Update Name</button>
+
+    <div class="form">
+      <h2>Sign IN</h2>
+      <div class="name">
+        <label for="">
+          Name : <input type="text" formControlName="name">
+        </label>
+
+        <p *ngIf="name.invalid" style="color: red;">
+          your name is invalid
+        </p>
+      </div>
+      <div class="age">
+        <label for="">
+          Age : <input type="text" formControlName="age">
+        </label>
+
+        <p *ngIf="age.invalid && age.untouched" style="color: red;">
+          maxLength must be 2
+        </p>
+      </div>
+      <div>
+        <button class="submit" [disabled]="myForm.invalid" (click)="addUser()">Add USER</button>
+      </div>
+
+
+      <div>
+        <h2>JSON</h2>
+        <p>{{myForm.value | json}}</p>
+      </div>
+
+      <p>Form Status: {{myForm.status}}</p>
+    </div>
+  </div>
+</form>

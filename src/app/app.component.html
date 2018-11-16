@@ -1,0 +1,21 @@
+<div class="user-list-content">
+  <h2>User List</h2>
+  <ul>
+    <li *ngFor="let user of users">
+      <p>ID: {{user?.id}}</p>
+      <p>Name : {{user?.name}}</p>
+      <p>Age : {{user?.age}}</p>
+    </li>
+  </ul>
+</div>
+
+<!--<app-routing></app-routing>-->
+
+<label for="">Type the ID
+  <input type="text" [(ngModel)]="userId" (input)="change()">
+</label>
+<ul *ngIf="user">
+  <li>id : {{user?.id }}, name : {{user?.name}}, age : {{user?.age}}</li>
+</ul>
+
+<app-forms></app-forms>
